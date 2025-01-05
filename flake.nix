@@ -24,9 +24,10 @@
           default = pkgs.mkShell {
             nativeBuildInputs = with pkgs; [
               cargo
+              lld
               rustc
               # rustPlatform.bindgenHook
-              lld
+              twiggy
               wasm-pack
             ];
           };
