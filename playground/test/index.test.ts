@@ -4,8 +4,8 @@ import { cosineSimilarity } from '@moeru-ai/cosine-similarity'
 describe('@moeru-ai/cosine-similarity', async () => {
 
   it('should calculate cosine similarity correctly', () => {
-    const vec1 = new Float32Array([1, 2, 3])
-    const vec2 = new Float32Array([4, 5, 6])
+    const vec1 = new Float64Array([1, 2, 3])
+    const vec2 = new Float64Array([4, 5, 6])
 
     const result = cosineSimilarity(vec1, vec2)
 
@@ -14,8 +14,8 @@ describe('@moeru-ai/cosine-similarity', async () => {
   });
 
   it('should calculate negative cosine similarity correctly', () => {
-    const vec1 = new Float32Array([1, 0])
-    const vec2 = new Float32Array([-1, 0])
+    const vec1 = new Float64Array([1, 0])
+    const vec2 = new Float64Array([-1, 0])
 
     const result = cosineSimilarity(vec1, vec2)
 
@@ -24,8 +24,8 @@ describe('@moeru-ai/cosine-similarity', async () => {
   });
 
   it('should throw an error when vectors have different lengths', () => {
-    const vec1 = new Float32Array([1, 2, 3])
-    const vec2 = new Float32Array([4, 5])
+    const vec1 = new Float64Array([1, 2, 3])
+    const vec2 = new Float64Array([4, 5])
 
     expect(() => cosineSimilarity(vec1, vec2)).toThrowError()
   });
