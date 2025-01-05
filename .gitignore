@@ -27,3 +27,6 @@ wasm-pack.log
 
 # direnv
 .direnv
+
+# nodejs
+dist/
