@@ -1,28 +1,22 @@
 #![no_std]
 
 extern crate alloc;
-extern crate no_panics_whatsoever;
-
-use core::alloc::{GlobalAlloc, Layout};
 
 use alloc::{format,vec::Vec};
 use js_sys::Error;
+use lol_alloc::{AssumeSingleThreaded, FreeListAllocator};
 use micromath::F32Ext;
 use wasm_bindgen::prelude::*;
 
-pub struct Allocator;
-
-unsafe impl GlobalAlloc for Allocator {
-    unsafe fn alloc(&self, _layout: Layout) -> *mut u8 {
-        0 as *mut u8
-    }
-    unsafe fn dealloc(&self, _ptr: *mut u8, _layout: Layout) {
-        unreachable!();
-    }
-}
-
+// https://github.com/craig-macomber/lol_alloc#usage
 #[global_allocator]
-static GLOBAL_ALLOCATOR: Allocator = Allocator;
+static GLOBAL_ALLOCATOR: AssumeSingleThreaded<FreeListAllocator> = unsafe { AssumeSingleThreaded::new(FreeListAllocator::new()) };
+
+// https://docs.rust-embedded.org/book/start/panicking.html
+#[cfg(debug_assertions)]
+extern crate panic_semihosting;
+#[cfg(not(debug_assertions))]
+extern crate panic_halt;
 
 #[wasm_bindgen(js_name = cosineSimilarity)]
 pub fn cosine_similarity(vec1: Vec<f32>, vec2: Vec<f32>) -> Result<f32, Error>{

@@ -1,0 +1,13 @@
+{
+  "name": "playground",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@moeru-ai/cosine-similarity": "workspace:^",
+    "vite-plugin-wasm": "^3.4.1",
+    "vitest": "^2.1.8"
+  }
+}
