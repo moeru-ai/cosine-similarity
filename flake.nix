@@ -23,7 +23,6 @@
         {
           default = pkgs.mkShell {
             nativeBuildInputs = with pkgs; [
-              binaryen # wasm-opt
               cargo
               rustc
               # rustPlatform.bindgenHook

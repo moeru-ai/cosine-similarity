@@ -1,0 +1,22 @@
+{
+  "name": "@moeru-ai/cosine-similarity",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/moeru-ai/cosine-similarity",
+  "repository": "github:moeru-ai/cosine-similarity",
+  "bugs": "https://github.com/moeru-ai/moeru-ai/cosine-similarity/issues",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./wasm": "./dist/index_bg.wasm",
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ]
+}
