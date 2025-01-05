@@ -12,8 +12,8 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 js-sys = { version = "0.3", default-features = false }
+libm = "0.2"
 lol_alloc = "0.4"
-micromath = "2.1"
 panic-halt = "1.0"
 panic-semihosting = "0.6"
 wasm-bindgen = { version = "0.2", default-features = false }

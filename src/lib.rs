@@ -5,7 +5,7 @@ extern crate alloc;
 use alloc::{format,vec::Vec};
 use js_sys::Error;
 use lol_alloc::{AssumeSingleThreaded, FreeListAllocator};
-use micromath::F32Ext;
+use libm::sqrt;
 use wasm_bindgen::prelude::*;
 
 // https://github.com/craig-macomber/lol_alloc#usage
@@ -19,7 +19,7 @@ extern crate panic_semihosting;
 extern crate panic_halt;
 
 #[wasm_bindgen(js_name = cosineSimilarity)]
-pub fn cosine_similarity(vec1: Vec<f32>, vec2: Vec<f32>) -> Result<f32, Error>{
+pub fn cosine_similarity(vec1: Vec<f64>, vec2: Vec<f64>) -> Result<f64, Error>{
     if vec1.len() != vec2.len() {
         return Err(Error::new(&format!(
             "Vectors must have the same length (vec1: {}, vec2: {})",
@@ -28,12 +28,12 @@ pub fn cosine_similarity(vec1: Vec<f32>, vec2: Vec<f32>) -> Result<f32, Error>{
         )))
     }
 
-    fn dot_product(vec1: &Vec<f32>, vec2: &Vec<f32>) -> f32 {
+    fn dot_product(vec1: &Vec<f64>, vec2: &Vec<f64>) -> f64 {
         vec1.iter().zip(vec2.iter()).fold(0.0, |sum, (&x, &y)| sum + x * y)
     }
 
-    fn magnitude(vec: &Vec<f32>) -> f32 {
-        vec.iter().fold(0.0, |sum, &x| sum + x * x).sqrt()
+    fn magnitude(vec: &Vec<f64>) -> f64 {
+        sqrt(vec.iter().fold(0.0, |sum, &x| sum + x * x))
     }
 
     Ok(dot_product(&vec1, &vec2) / (magnitude(&vec1) * magnitude(&vec2)))
