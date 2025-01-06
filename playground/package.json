@@ -3,10 +3,15 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "bench": "vitest bench",
     "test": "vitest run"
   },
   "devDependencies": {
     "@moeru-ai/cosine-similarity": "workspace:^",
+    "@xsai/embed": "^0.0.23",
+    "@xsai/providers": "^0.0.23",
+    "ai": "^4.0.26",
+    "compute-cosine-similarity": "^1.1.0",
     "vite-plugin-wasm": "^3.4.1",
     "vitest": "^2.1.8"
   }
