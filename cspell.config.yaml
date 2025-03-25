@@ -1,0 +1,14 @@
+version: '0.2'
+ignorePaths: []
+dictionaryDefinitions: []
+dictionaries: []
+words:
+  - bumpp
+  - changelogithub
+  - importantimport
+  - masknet
+  - moeru
+  - nomic
+  - xsai
+ignoreWords: []
+import: []

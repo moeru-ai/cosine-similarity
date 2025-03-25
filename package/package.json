@@ -1,0 +1,41 @@
+{
+  "name": "@moeru-ai/cosine-similarity",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "measures the similarity between two non-zero vectors.",
+  "author": "Moeru AI",
+  "license": "MIT",
+  "homepage": "https://github.com/moeru-ai/cosine-similarity",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moeru-ai/cosine-similarity.git",
+    "directory": "package"
+  },
+  "bugs": "https://github.com/moeru-ai/cosine-similarity/issues",
+  "keywords": [
+    "moeru-ai",
+    "cosine",
+    "similarity",
+    "cosine-similarity",
+    "vector"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "bench": "vitest bench",
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  }
+}

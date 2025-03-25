@@ -1,0 +1,32 @@
+{
+  "name": "@moeru-ai/cosine-similarity-workspace",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "repository": "github:moeru-ai/cosine-similarity",
+  "scripts": {
+    "bench": "pnpm -rF @moeru-ai/cosine-similarity bench",
+    "build": "pnpm -rF @moeru-ai/cosine-similarity build",
+    "bump": "bumpp",
+    "lint": "eslint --cache .",
+    "test": "pnpm -rF @moeru-ai/cosine-similarity test"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.11.0",
+    "@importantimport/eslint-config": "^1.0.0-beta.2",
+    "@importantimport/tsconfig": "^1.0.0-beta.2",
+    "@pnpm/find-workspace-dir": "^1000.0.2",
+    "@types/node": "^22.13.4",
+    "@xsai/embed": "0.2.0-beta.1",
+    "ai": "^4.2.2",
+    "bumpp": "^10.0.3",
+    "compute-cosine-similarity": "^1.1.0",
+    "eslint": "^9.20.1",
+    "fast-cosine-similarity": "^1.2.2",
+    "jiti": "^2.4.2",
+    "tsup": "^8.3.6",
+    "tsx": "^4.19.3",
+    "vitest": "^3.0.6"
+  }
+}

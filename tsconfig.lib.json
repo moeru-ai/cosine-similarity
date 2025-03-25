@@ -1,0 +1,7 @@
+{
+  "extends": "@importantimport/tsconfig/app.json",
+  "include": [
+    "package/src",
+    "package/test"
+  ]
+}
