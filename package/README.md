@@ -1,5 +1,10 @@
 # @moeru-ai/cosine-similarity
 
+![version](https://flat.badgen.net/npm/v/@moeru-ai/cosine-similarity?color=cyan)
+![install size](https://flat.badgen.net/packagephobia/install/@moeru-ai/cosine-similarity?color=cyan)
+![minified size](https://flat.badgen.net/bundlephobia/min/@moeru-ai/cosine-similarity?color=cyan)
+![minzipped size](https://flat.badgen.net/bundlephobia/minzip/@moeru-ai/cosine-similarity?color=cyan)
+
 ## Install
 
 ```bash
