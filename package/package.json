@@ -2,7 +2,7 @@
   "name": "@moeru-ai/cosine-similarity",
   "type": "module",
   "version": "0.0.1",
-  "description": "measures the similarity between two non-zero vectors.",
+  "description": "Measures the similarity between two non-zero vectors.",
   "author": "Moeru AI",
   "license": "MIT",
   "homepage": "https://github.com/moeru-ai/cosine-similarity",
